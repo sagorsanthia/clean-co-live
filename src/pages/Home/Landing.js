@@ -16,12 +16,21 @@ const Landing = () => {
             </p>
             <button class="btn btn-primary">Get Started</button>
           </div>
-          <div className="h-[60vh] shrink-0">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="100"
+            className="h-[60vh] shrink-0"
+          >
             <img src={BucketGirl} class="max-w-sm " alt=" " />
           </div>
         </div>
       </div>
-      <div className="rounded mx-auto shadow-2xl w-5/6 p-10 relative mt-[-50px] bg-base-100">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        className="rounded mx-auto shadow-2xl w-5/6 p-10 relative mt-[-50px] bg-base-100"
+      >
         <h1 className="text-2xl text-primary mb-5">Get Free Estimate</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <input
