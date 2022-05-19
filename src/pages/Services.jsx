@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import fetcher from "../Api";
 
 const Services = () => {
-  return <div className="mt-5">Services</div>;
+  const [services, setServices] = useState();
+  console.log(services);
+  useEffect(() => {
+    /*  axios
+      .get("http://localhost:5000/services")
+      .then((res) => setServices(res.data)); */
+    (async () => {
+      const res = await fetcher.get("/services");
+      setServices(res.data);
+    })();
+  }, []);
 };
 
 export default Services;
